@@ -1,9 +1,8 @@
-/* GET home page */
 const homelist = (req, res) => {
-    res.render('locations-list', {
+    res.render('location-list', {
         title: 'Loc8r - find a place to work with wifi',
         pageHeader: {
-            title: 'Loc8r',
+            title: 'LOC8R',
             strapline: 'Find places to work with wifi near you!'
         },
         sidebar: "Looking for wifi and a seat? Loc8r helps you find places to work when out and about. Perhaps with coffee, cake or a pint? Let Loc8r help you find the place you're looking for.",
@@ -13,13 +12,15 @@ const homelist = (req, res) => {
             rating: 3,
             facilities: ['Hot drinks', 'Food', 'Premium wifi'],
             distance: '100m'
-        }, {
+        }], 
+        cafe : [{
             name: 'Cafe Hero',
             address: '125 High Street, Reading, RG6 1PS',
             rating: 4,
             facilities: ['Hot drinks', 'Food', 'Premium wifi'],
             distance: '200m'
-        }, {
+        }], 
+        king : [{
             name: 'Burger Queen',
             address: '125 High Street, Reading, RG6 1PS',
             rating: 2,
@@ -28,19 +29,30 @@ const homelist = (req, res) => {
         }]
     });
 };
-
-/* GET Location Info page */
+//locationInfo//
 const locationInfo = (req, res) => {
-    res.render('location-info', { title: 'Location info' });
+    res.render('location-info', {title: 'Starbucks'});
 };
 
-/* GET Add review page */
+//locationInfo2//
+const locationInfo1 = (req, res) => {
+    res.render('location-info1', {title: 'Cafe Raasta'});
+};
+       
+//locationInfo3//
+const locationInfo2 = (req, res) => {
+        res.render('location-info2', {title: 'Burger King'});
+            
+};
+//addReview//    
 const addReview = (req, res) => {
-    res.render('location-review-form', { title: 'Add review' });
+    res.render('location-review-form', {title: 'Review Starbucks'});
 };
 
 module.exports = {
     homelist,
     locationInfo,
+    locationInfo1,
+    locationInfo2,
     addReview
-};
+}
