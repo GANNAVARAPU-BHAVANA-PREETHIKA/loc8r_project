@@ -4,7 +4,8 @@ const PORT=process.env.PORT||3000;
 
 
 var gracefulShutdown;
-var dbURI='mongodb://0.0.0.0:27017/loc8r';
+// var dbURI='mongodb://0.0.0.0:27017/loc8r';
+dbURI='mongodb+srv://purnachandraraogannavarapu:<password>@cluster0.pceywqa.mongodb.net/?retryWrites=true&w=majority'
 if(process.env.NODE_ENV==='production'){
     dbURI=process.env.MONGODB_URI;
 }
